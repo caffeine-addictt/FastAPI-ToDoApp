@@ -192,4 +192,4 @@ Project Link: [https://github.com/caffeine-addictt/FastAPI-ToDoApp](https://gith
 [license-shield]: https://img.shields.io/github/license/caffeine-addictt/FastAPI-ToDoApp.svg?style=for-the-badge
 [license-url]: https://github.com/caffeine-addictt/FastAPI-ToDoApp/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: www.linkedin.com/in/ngjx
+[linkedin-url]: https://www.linkedin.com/in/ngjx
