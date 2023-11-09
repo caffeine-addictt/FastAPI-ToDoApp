@@ -1,0 +1,36 @@
+:root {
+  --primary: #6200EE;
+  --primary-variant: #3700B3;
+  --secondary: #03DAC6;
+  --secondary-variant: #018786;
+
+  --bg-color: #FFFFFF;
+  --error-color: #B00020;
+
+  /* Text color on x */
+  --on-primary: #FFFFFF;
+  --on-secondary: #000000;
+  --on-bg: #000000;
+  --on-surface: #000000;
+  --on-error: #FFFFFF;
+}
+
+/* Guide https://m2.material.io/design/color/dark-theme.html#ui-application */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #BB86FC;
+    --primary-variant: #3700B3;
+    --secondary: #03DAC6;
+    --secondary-variant: #03DAC6;
+
+    --bg-color: #121212;
+    --error-color: #CF6679;
+
+    /* Text color on x */
+    --on-primary: #000000;
+    --on-secondary: #000000;
+    --on-bg: #FFFFFF;
+    --on-surface: #FFFFFF;
+    --on-error: #000000;
+  }
+}
