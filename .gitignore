@@ -1,4 +1,8 @@
-*venv/
-*__pycache__/
+# Python stuff
+venv/
+__pycache__/
 *.py[cod]
 *$py.class
+
+# npm stuff
+node_modules/
