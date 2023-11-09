@@ -1,6 +1,6 @@
 #!/usr/bin/env/bash
 
-echo -e "\n========== Runing in production mode ==========\n"
+echo -e "\n========== Runing in development mode ==========\n"
 
 
 # Build venv if not existing
@@ -23,8 +23,8 @@ fi
 
 echo -e "\n========== Building Dependencies ==========\n"
 pip install --upgrade -r requirements.txt
-npm run --prefix src/tailwindcss prod
 
 
-echo -e "\n========== Starting up server ==========\n"
-uvicorn --port 8080 src:app
+# Run tailwind builder and app in parallel
+echo -e "\n========== Starting server [w/ reload] & tailwind [w/ reload] in parallel ==========\n"
+uvicorn --reload --port 8080 src:app & npm run --prefix src/tailwindcss dev

@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
@@ -8,9 +9,10 @@ templates = Jinja2Templates(directory = 'src/templates')
 app.mount('/static', StaticFiles(directory = 'src/static'), name = 'static')
 
 
-@app.get('/')
-def render_homepage():
+@app.get('/', response_class = HTMLResponse)
+def render_homepage(request: Request):
   return templates.TemplateResponse(
-    'index.html'
+    'index.html',
+    context = {'request': request, 'txt': 'hi'}
   )
 

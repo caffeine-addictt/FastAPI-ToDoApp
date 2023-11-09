@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {% block title  %}
+        My To-Do List
+      {% endblock %}
+    </title>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    {% block scripts %}
+    {% endblock %}
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', path = 'globals.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', path = 'tailwind.css') }}" />
+    {% block styles %}
+    {% endblock %}
+  </head>
+
+
+  <body class="flex flex-col flex-auto w-full max-w-full min-h-screen">
+    {% block navbar %}
+      {% include 'components/navbar.html' %}
+    {% endblock %}
+
+    <div class="flex flex-col flex-auto">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+    {% block footer %}
+      {% include 'components/footer.html' %}
+    {% endblock %}
+
+    <!-- Toasts -->
+    
+  </body>
+
+</html>
