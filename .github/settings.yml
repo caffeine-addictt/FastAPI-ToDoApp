@@ -1,4 +1,5 @@
-labels:
+repository:
+  labels:
     - name: 'Type: Bug'
       color: e80c0c
       description: Something isn't working as expected.
